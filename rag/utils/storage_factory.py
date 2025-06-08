@@ -30,6 +30,7 @@ class Storage(Enum):
     AZURE_SAS = 3
     AWS_S3 = 4
     OSS = 5
+    OPENDAL = 6
 
 
 class StorageFactory:
@@ -39,6 +40,7 @@ class StorageFactory:
         Storage.AZURE_SAS: RAGFlowAzureSasBlob,
         Storage.AWS_S3: RAGFlowS3,
         Storage.OSS: RAGFlowOSS,
+        Storage.OPENDAL: OpenDALStorage
     }
 
     @classmethod
